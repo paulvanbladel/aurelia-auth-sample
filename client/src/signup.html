@@ -1,0 +1,22 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+
+    <form role="form" submit.delegate="signup()">
+      <div class="form-group">
+        <label for="fn">Display Name</label>
+        <input type="text" value.bind="displayName" class="form-control" id="fn" placeholder="Displayname">
+      </div>
+      <div class="form-group">
+        <label for="fn">Email</label>
+        <input type="text" value.bind="email" class="form-control" id="fn" placeholder="email">
+      </div>
+      <div class="form-group">
+        <label for="ln">Password</label>
+        <input type="text" value.bind="password" class="form-control" id="ln" 
+        placeholder="password">
+      </div>
+      <button type="submit" class="btn btn-default">Signup</button>
+    </form>
+  </section>
+</template>

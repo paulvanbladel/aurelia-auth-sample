@@ -1,0 +1,20 @@
+var config = require('./config.global');
+config.env = "development";
+config.myspecificparam = "special param";
+config.port = 5000;
+config.mongo = {};
+config.mongo.connectionstring = 'mongodb://localhost/' + 'aureliauth-development' ;
+config.TOKEN_SECRET = process.env.TOKEN_SECRET || 'A hard to guess string';
+config.MONGO_URI = process.env.MONGO_URI || 'localhost';
+config.FACEBOOK_SECRET = process.env.FACEBOOK_SECRET || 'cb65785054b0daf9ac7fccbd842262bc';
+config.FOURSQUARE_SECRET = process.env.FOURSQUARE_SECRET || 'Foursquare Client Secret';
+config.GOOGLE_SECRET = process.env.GOOGLE_SECRET || 'BA8_bWb7CITk9tqBBrmq05hS';
+config.GITHUB_SECRET = process.env.GITHUB_SECRET || 'GitHub Client Secret';
+config.LINKEDIN_SECRET = process.env.LINKEDIN_SECRET || 'DusvK2v6NAjLuXa5';
+config.WINDOWS_LIVE_SECRET = process.env.WINDOWS_LIVE_SECRET || 'Windows Live Secret';
+config.TWITTER_KEY = process.env.TWITTER_KEY || 'nE9PpC4CHJ7ItiLb3GiA02Fir';
+config.TWITTER_SECRET = process.env.TWITTER_SECRET || 'qCCl0nIsjVe4jDyxwiAbDvSkB2PXQUeQ2gESAeVxS62GtxEVXp';
+config.TWITTER_CALLBACK = process.env.TWITTER_CALLBACK || 'http://localhost:4000';
+config.YAHOO_SECRET = process.env.YAHOO_SECRET || 'Yahoo Client Secret';
+
+module.exports = config;
