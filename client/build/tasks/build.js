@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var plugin = require('gulp-load-plugins')({lazy: true});
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
@@ -13,6 +14,7 @@ var assign = Object.assign || require('object.assign');
 // by errors from other gulp plugins
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build-system', function () {
+  log("source " + paths.source)
   return gulp.src(paths.source)
     .pipe(plumber())
     .pipe(changed(paths.output, {extension: '.js'}))
@@ -40,3 +42,7 @@ gulp.task('build', function(callback) {
     callback
   );
 });
+function log(msg) {
+    plugin.util.log(plugin.util.colors.green(msg));
+
+}

@@ -20,7 +20,7 @@ gulp.task('serve', ['build', 'node'], function(done) {
     open: false,
     port: paths.webServerPort,
     server: {
-      baseDir: [paths.clientBaseDir],
+      baseDir: ['.'],
       middleware: [
         proxyOptionsAccessControl, 
         proxy(proxyOptionsApiRoute), 

@@ -15,13 +15,6 @@ export class AuthService  {
 		this.config = config.current;
 	};
 
-	/*configure(incomingConfig){
-		//todo move directly ....
-		this.config.configure(incomingConfig);
-		//this.config = this.config;
-	};*/
-
-
 	getMe(){
 		var url = 'auth/me';
 		return this.http.createRequest(url)

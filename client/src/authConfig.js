@@ -1,5 +1,4 @@
-var config = {
-
+var configForDevelopment = {
 	providers: {
 		google: {
 			clientId: '239531826023-ibk10mb9p7ull54j55a61og5lvnjrff6.apps.googleusercontent.com'
@@ -11,13 +10,10 @@ var config = {
 		facebook:{
 			clientId:'1452782111708498'
 		}
-
 	}
 };
-//production
 
-/*var config = {
-
+var configForProduction = {
 	providers: {
 		google: {
 			clientId: '239531826023-3ludu3934rmcra3oqscc1gid3l9o497i.apps.googleusercontent.com'
@@ -31,5 +27,14 @@ var config = {
 		}
 
 	}
-};*/
+};
+var config ;
+if (window.location.hostname==='localhost') {
+	config = configForDevelopment;
+}
+else{
+	config = configForProduction;
+}
+
+
 export default config;
