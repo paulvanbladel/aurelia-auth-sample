@@ -91,10 +91,7 @@ pollPopup(){
             //interval.cancel(polling);
         clearInterval(self.polling);
           }
-        } catch (error) {
-          console.log("polling window " + error);
-          throw error;
-        }
+        } catch (error) {}
 
         if (!self.popupWindow) {
           clearInterval(self.polling);
