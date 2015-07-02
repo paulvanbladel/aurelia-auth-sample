@@ -50,16 +50,16 @@ export class OAuth2 {
               openPopup = this.popup.open(url, this.defaults.name, this.defaults.popupOptions, this.defaults.redirectUri).pollPopup();
             }
 
-
+        var self = this;
         return openPopup
             .then((oauthData) => {
-                if (this.defaults.responseType === 'token') {
+                if (self.defaults.responseType === 'token') {
                     return oauthData;
                 }
-                if (oauthData.state && oauthData.state !== this.storage.get(stateName)) {
+                if (oauthData.state && oauthData.state !== self.storage.get(stateName)) {
                     return Promise.reject('OAuth 2.0 state parameter mismatch.');
                 }
-                return this.exchangeForToken(oauthData, userData);
+                return self.exchangeForToken(oauthData, userData);
             });
     };
 
