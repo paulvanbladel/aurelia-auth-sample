@@ -1,9 +1,9 @@
 
 var path = require('path');
-var serverBaseDir = '../server';
+var serverBaseDir = path.normalize('./../server');
 var appRoot = 'src/';
 var outputRoot = 'dist/';
-var nodeStartupScript = 'app';
+var nodeStartupScript = 'app.js';
 module.exports = {
   root: appRoot,
   source: appRoot + '**/*.js',
@@ -17,6 +17,6 @@ module.exports = {
   nodeJsPort:5000,
   webServerPort : 4000,
   serverBaseDir : serverBaseDir,
-  nodeStartUpScriptPath : serverBaseDir + '/'  + nodeStartupScript
+  nodeStartUpScriptPath : path.join( serverBaseDir,  nodeStartupScript)
 };
 

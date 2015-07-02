@@ -7,8 +7,9 @@ gulp.task('node', function () {
     var nodeOptions = {
         script: paths.nodeStartUpScriptPath,
         delayTime: 1,
-        watch: [paths.serverBaseDir]
+        watch: ["./../server/**/*"]
     };
+    
     nodemon(nodeOptions)
         .on('change', function () {
             log('nodemon detected change...!')

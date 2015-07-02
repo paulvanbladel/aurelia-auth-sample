@@ -8,6 +8,10 @@ var google = require('./google.js');
 var linkedin = require('./linkedin.js');
 var twitter = require('./twitter.js');
 var facebook = require('./facebook.js');
+var github = require('./github.js');
+var live = require('./live.js');
+var yahoo = require('./yahoo.js');
+var foursquare = require('./foursquare');
 var router = express.Router();
 
 router.post('/signup', authController.signup);
@@ -16,6 +20,11 @@ router.post('/google', google.authenticate);
 router.post('/linkedin', linkedin.authenticate);
 router.post('/twitter', twitter.authenticate);
 router.post('/facebook', facebook.authenticate);
+router.post('/github', github.authenticate);
+router.post('/live', live.authenticate);
+router.post('/yahoo', yahoo.authenticate);
+router.post('/foursquare', foursquare.authenticate);
+
 //TODO implement ensureAuthenticated
 /*router.get('/me',authUtils.ensureAuthenticated, meController.getMe );
 router.put('/me',authUtils.ensureAuthenticated, meController.updateMe );

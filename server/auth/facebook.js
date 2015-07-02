@@ -5,6 +5,7 @@ var request = require('request');
 var jwt = require('jwt-simple');
 var authUtils = require('./authUtils');
 
+
 exports.authenticate = function (req, res) {
     var accessTokenUrl = 'https://graph.facebook.com/v2.3/oauth/access_token';
     var graphApiUrl = 'https://graph.facebook.com/v2.3/me';

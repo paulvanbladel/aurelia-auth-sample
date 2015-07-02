@@ -11,10 +11,10 @@ exports.createJWT = function(user){
     return jwt.encode(payload, config.TOKEN_SECRET);
 }
 
-
 exports.handleError = function (res, err) {
     return res.send(400, err);
 }
+
 
 exports.ensureAuthenticated = function(req, res, next) {
   if (!req.headers.authorization) {
