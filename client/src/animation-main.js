@@ -5,7 +5,7 @@ export function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     .plugin('aurelia-animator-css')
-    .plugin('./aureliauth/index', (baseConfig)=>{   //the name of plugin becomes 'paulvanbladel/aureliauth'
+    .plugin('paulvanbladel/aureliauth', (baseConfig)=>{   //the name of plugin becomes 'paulvanbladel/aureliauth'
     	baseConfig.configure(config);
     });
 

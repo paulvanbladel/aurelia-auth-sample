@@ -1,6 +1,6 @@
 import {bindable } from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
-import {AuthService} from './aureliauth/authService';
+import {AuthService} from 'paulvanbladel/aureliauth';
 //import {AuthFilterValueConverter} from './authFilter';
 //import {Router} from 'aurelia-router';
 @inject(AuthService )

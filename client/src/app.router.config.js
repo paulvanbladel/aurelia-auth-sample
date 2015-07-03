@@ -1,4 +1,4 @@
-import {AuthorizeStep} from './aureliauth/authorizeStep';
+import {AuthorizeStep} from 'paulvanbladel/aureliauth';
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 

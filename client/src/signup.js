@@ -1,5 +1,5 @@
 import {inject} from 'aurelia-framework';
-import {AuthService} from './aureliauth/authService';
+import {AuthService} from 'paulvanbladel/aureliauth';
 @inject(AuthService)
 
 export class Signup{
