@@ -13,7 +13,7 @@ export class Signup{
 	displayName='';
 
 	signup(){
-		this.auth.signup(this.displayName, this.email, this.password)
+		return this.auth.signup(this.displayName, this.email, this.password)
 		.then((response)=>{
 			console.log("signed up");
 		});

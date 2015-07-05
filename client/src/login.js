@@ -14,15 +14,14 @@ export class Login{
 	login(){
 		return this.auth.login(this.email, this.password)
 		.then(response=>{
-			console.log("success logged in vm." + response);
+			console.log("success logged " + response);
 		})
 		.catch(err=>{
-			console.log("login failure vm.");
+			console.log("login failure");
 		});
 	};
 	
 	authenticate(name){
-		//var name = "google";
 		return this.auth.authenticate(name, false, null)
 		.then((response)=>{
 			console.log("auth response " + response);
