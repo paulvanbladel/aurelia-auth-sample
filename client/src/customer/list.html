@@ -1,0 +1,23 @@
+<template>
+  <section >
+      <h2>${heading}</h2>
+      <div class="row au-stagger">
+      <a route-href="route:create"
+               class="btn btn-default">
+                Create New
+            </a>
+        <div  repeat.for="customer of customers">
+          <p>${customer.firstName}</p>
+          <h3>${customer.lastName}</h3>
+           <a route-href="route:detail; params.bind:{id:customer._id}" 
+                       class="btn btn-default">
+                        Details
+                    </a>
+	        <a route-href="route:edit; params.bind:{id:customer._id}"
+	           class="btn btn-default">
+	            Edit
+	        </a>
+        </div>
+      </div>
+  </section>
+</template>

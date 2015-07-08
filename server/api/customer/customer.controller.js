@@ -55,7 +55,6 @@ exports.show = function (req, res) {
 
 // Creates a new item in the DB.
 exports.create = function (req, res) {
-    console.log("create called !!!!!!!!");
     Entity.create(req.body, function (err, item) {
         if (err) {
             return handleError(res, err);
@@ -66,8 +65,8 @@ exports.create = function (req, res) {
 
 // Updates an existing item in the DB.
 exports.update = function (req, res) {
-    //console.log("body _id :" + req.body._id);
-    //console.log("param id :" + req.params.id);
+    console.log("body _id :" + req.body._id);
+    console.log("param id :" + req.params.id);
     if (req.body._id) {
         delete req.body._id;
     }

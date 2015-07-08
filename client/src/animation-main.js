@@ -1,6 +1,5 @@
 import config from './authConfig';
 export function configure(aurelia) {
-	console.log("testje");
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
