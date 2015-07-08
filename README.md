@@ -6,15 +6,18 @@ Uses a NodeJs backend with mongoDb.
 2. Jspm
 3. You need an running MongoDb server.
 4. Gulp
+
 ## How to run?
+
 1. cd client
 2. npm install
 3. jspm install
 4. update authConfig.js with your own clientIds
 5. cd ../server
 6. npm install
-7. cd ../client
-8. gulp watch
-9. Open an browser with http://localhost:4000
+7. create under /server/config a file called config.development.js and copy the content from config.production.js and update the security values.
+8. cd ../client
+9. gulp watch
+10. Open an browser with http://localhost:4000
 
 
