@@ -13,8 +13,9 @@ Uses a NodeJs backend with mongoDb.
 4. update authConfig.js with your own clientIds
 5. cd ../server
 6. npm install
-7. cd ../client
-8. gulp watch
-9. Open an browser with http://localhost:4000
+7. create under /server/config a file called config.development.js and copy the content from config.production.js and update the security values.
+8. cd ../client
+9. gulp watch
+10. Open an browser with http://localhost:4000
 
 
