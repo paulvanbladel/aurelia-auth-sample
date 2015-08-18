@@ -4,7 +4,7 @@ import 'bootstrap/css/bootstrap.css!';
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import AppRouterConfig from 'app.router.config';
-import HttpClientConfig from 'paulvanbladel/aurelia-auth/app.httpClient.config';
+import HttpClientConfig from 'aurelia-auth/app.httpClient.config';
 @inject(Router,HttpClientConfig,AppRouterConfig )
 export class App {
 

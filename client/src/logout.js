@@ -1,4 +1,4 @@
-import {AuthService} from 'paulvanbladel/aurelia-auth';
+import {AuthService} from 'aurelia-auth';
 import {inject} from 'aurelia-framework';
 
 
