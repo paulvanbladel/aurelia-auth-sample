@@ -40,7 +40,7 @@
     "directories": {},
     "dependencies": {
       "aurelia-animator-css": "github:aurelia/animator-css@^0.17.0",
-      "aurelia-auth": "github:paulvanbladel/aurelia-auth@^0.9.18",
+      "aurelia-auth": "github:paulvanbladel/aurelia-auth@^0.9.19",
       "aurelia-binding": "github:aurelia/binding@^0.10.0",
       "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.18.0",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.11.0",
