@@ -1,0 +1,11 @@
+<template>
+  <section >
+      <h2>${heading}</h2>
+      <div class="row au-stagger">
+        <div  repeat.for="customer of customers">
+          <p>${customer.firstName}</p>
+          <h3>${customer.lastName}</h3>
+        </div>
+      </div>
+  </section>
+</template>
