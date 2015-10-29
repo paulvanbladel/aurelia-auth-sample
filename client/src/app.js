@@ -5,7 +5,8 @@ import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import AppRouterConfig from 'app.router.config';
 import HttpClientConfig from 'aurelia-auth/app.httpClient.config';
-import FetchConfig from 'aurelia-auth/app.fetch-httpClient.config';
+//import FetchConfig from 'aurelia-auth/app.fetch-httpClient.config';
+import {FetchConfig} from 'aurelia-auth';
 @inject(Router,HttpClientConfig,FetchConfig, AppRouterConfig )
 export class App {
 
