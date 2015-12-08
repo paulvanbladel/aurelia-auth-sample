@@ -19,5 +19,6 @@ Uses a NodeJs backend with mongoDb.
 8. cd ../client
 9. gulp watch
 10. Open an browser with http://localhost:4000
+11. ...
 
 
