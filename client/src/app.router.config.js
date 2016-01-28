@@ -15,7 +15,7 @@ export default class{
 
 			config.map([
 				{ route: ['','welcome'],  moduleId: './welcome',      nav: true, title:'Welcome' },
-				{ route: 'customer-fetch',        moduleId: './customerFetch',       nav: true, title:'CRM-fetch', auth:true },
+				{ route: 'customer',        moduleId: './customer',       nav: true, title:'CRM', auth:true },
 				{ route: 'signup',        moduleId: './signup',       nav: false, title:'Signup' },
 				{ route: 'login',        moduleId: './login',       nav: false, title:'Login' },
 				{ route: 'logout',        moduleId: './logout',       nav: false, title:'Logout' },

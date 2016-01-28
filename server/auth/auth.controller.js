@@ -22,6 +22,7 @@ exports.signup = function (req, res) {
 };
 
 exports.login = function (req, res) {
+    console.log("req body " + req.body.email);
     Entity.findOne({email: req.body.email}, '+password', function (err, user) {
         if (!user) {
             return res.status(401).json({message: 'Wrong email and/or password'});

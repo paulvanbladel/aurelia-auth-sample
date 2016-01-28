@@ -12,7 +12,11 @@ export class Login{
 	email='';
 	password='';
 	login(){
+		
+
+	    var creds = "grant_type=password&email=" + this.email + "&password=" + this.password;
 		return this.auth.login(this.email, this.password)
+        //return this.auth.login(creds)
 		.then(response=>{
 			console.log("success logged " + response);
 		})
