@@ -7,19 +7,19 @@ import AppRouterConfig from 'app.router.config';
 //import HttpClientConfig from 'aurelia-auth/app.httpClient.config';
 //import FetchConfig from 'aurelia-auth/app.fetch-httpClient.config';
 import {FetchConfig} from 'aurelia-auth';
-@inject(Router,FetchConfig, AppRouterConfig )
+@inject(Router, FetchConfig, AppRouterConfig)
 export class App {
 
-  constructor(router, fetchConfig, appRouterConfig){
-    this.router = router;
-    this.appRouterConfig = appRouterConfig;
-    this.fetchConfig = fetchConfig;
-  }
-  
-  activate(){
-    this.appRouterConfig.configure();
-    this.fetchConfig.configure();
-  }
+    constructor(router, fetchConfig, appRouterConfig) {
+        this.router = router;
+        this.appRouterConfig = appRouterConfig;
+        this.fetchConfig = fetchConfig;
+    }
+
+    activate() {
+        this.appRouterConfig.configure();
+        this.fetchConfig.configure();
+    }
 }
 
 

@@ -1,5 +1,31 @@
 var configForDevelopment = {
 	providers: {
+        
+         identSrv : {
+            name: 'identSrv',
+            url: '/auth/identSrv',
+            authorizationEndpoint: 'http://localhost:22530/connect/authorize', //if this ends with slash --> game over
+            redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
+            scope: ['profile', 'openid'],
+            
+            responseType :'code',
+
+
+            scopePrefix: '',
+            scopeDelimiter: ' ',
+            requiredUrlParams: ['scope', 'nonce'],
+            optionalUrlParams: ['display'],
+            state: 'session_state',
+            display: 'popup',
+            type: '2.0',
+            clientId: 'jsClient',
+            nonce : function(){
+                var val = ((Date.now() + Math.random()) * Math.random()).toString().replace(".", "");
+                return encodeURIComponent(val);
+            },
+            popupOptions: { width: 452, height: 633 }
+        },
+        
 		google: {
 			clientId: '239531826023-ibk10mb9p7ull54j55a61og5lvnjrff6.apps.googleusercontent.com',
 			state: function(){

@@ -28,6 +28,17 @@
     <div class="panel-body">
       <legend><i class="ion-link"></i> Linked Accounts</legend>
       <div class="btn-group-vertical">
+          
+          
+           <button class="btn btn-sm btn-danger" if.bind="profile.identSrv" click.delegate="unlink('identSrv')">
+          <i class="ion-social-facebook"></i> Unlink identSrv Account
+        </button>
+        <button class="btn btn-sm btn-primary" if.bind="!profile.identSrv" click.delegate="link('identSrv')">
+          <i class="ion-social-facebook"></i> Link identSrv Account
+        </button>
+          
+          
+          
         <button class="btn btn-sm btn-danger" if.bind="profile.facebook" click.delegate="unlink('facebook')">
           <i class="ion-social-facebook"></i> Unlink Facebook Account
         </button>

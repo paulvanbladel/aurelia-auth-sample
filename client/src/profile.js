@@ -24,7 +24,10 @@ export class Profile{
 		.then(()=> this.auth.getMe())
 		.then(data=>{
 			this.profile = data;
-		});;
+		})
+        .catch(err=>{
+			console.log("profile failure");
+		});
 	}
 	unlink(provider){
 		return this.auth.unlink(provider)
