@@ -29,7 +29,7 @@ exports.updateMe = function (req, res) {
 exports.unlink = function(req,res){
 var provider = req.params.provider;
 console.log("provider = " + provider);
-  var providers = ['facebook', 'foursquare', 'google', 'github', 'linkedin', 'live', 'twitter', 'yahoo'];
+  var providers = ['facebook', 'foursquare', 'google', 'github', 'linkedin', 'live', 'twitter', 'yahoo','identSrv'];
 
   if (providers.indexOf(provider) === -1) {
     return res.status(400).send('Unknown provider');

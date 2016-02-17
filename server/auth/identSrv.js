@@ -21,7 +21,7 @@ exports.authenticate = function (req, res) {
     // Step 1. Exchange authorization code for access token.
     request.post(accessTokenUrl, { json: true, form: params }, function (err, response, token) {
         var accessToken = token.access_token;
-        console.log(accessToken);
+
         var headers = { Authorization: 'Bearer ' + accessToken, connection: 'keep-alive'  };
 
         // Step 2. Retrieve profile information about the current user.
@@ -33,10 +33,10 @@ exports.authenticate = function (req, res) {
                     console.log("error : " + err);
                 }
 
-                console.log("here we are after get");
+            
                 // Step 3a. Link user accounts.
                 if (req.headers.authorization) {
-                    User.findOne({ google: profile.sub }, function (err, existingUser) {
+                    User.findOne({ identSrv: profile.sub }, function (err, existingUser) {
                         if (existingUser) {
                             return res.status(409).send({ message: 'There is already an IdentityServer account that belongs to you' });
                         }
@@ -46,7 +46,7 @@ exports.authenticate = function (req, res) {
                             if (!user) {
                                 return res.status(400).send({ message: 'User not found' });
                             }
-                            user.google = profile.sub;
+                            user.identSrv = profile.sub;
                             //user.picture = user.picture || profile.picture.replace('sz=50', 'sz=200');
                             user.displayName = user.displayName || profile.name;
                             user.save(function () {
@@ -57,7 +57,7 @@ exports.authenticate = function (req, res) {
                     });
                 } else {
                     // Step 3b. Create a new user account or return an existing one.
-                    User.findOne({ google: profile.sub }, function (err, existingUser) {
+                    User.findOne({ identSrv: profile.sub }, function (err, existingUser) {
                         if (existingUser) {
                             return res.send({ token: authUtils.createJWT(existingUser) });
                         }
