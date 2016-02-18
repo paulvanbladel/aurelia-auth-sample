@@ -21,7 +21,10 @@ export class Login{
 			console.log("success logged " + response);
 		})
 		.catch(err=>{
-			console.log("login failure");
+            err.json().then(function(e){
+            console.log("login failure : " + e.message);    
+            });
+			
 		});
 	};
 	
