@@ -1,30 +1,34 @@
 import {bindable } from 'aurelia-framework';
 import {inject} from 'aurelia-framework';
 import {AuthService} from 'aurelia-auth';
-//import {AuthFilterValueConverter} from './authFilter';
-//import {Router} from 'aurelia-router';
-@inject(AuthService )
+import {BindingEngine} from 'aurelia-framework'; 
+
+@inject(AuthService, BindingEngine)
 export class NavBar {
-  _isAuthenticated=false;
-  @bindable router = null;
-  
-  constructor(auth ){
-  	this.auth = auth;
+    _isAuthenticated = false;
+    displayName = "";
+    @bindable router = null;
+    subscription = {};
+    constructor(auth, bindingEngine) {
+        this.auth = auth;
+        this.bindingEngine = bindingEngine;
+        this._isAuthenticated = this.auth.isAuthenticated();
+        this.subscription = bindingEngine.propertyObserver(this, 'isAuthenticated')
+            .subscribe((newValue, oldValue) => {
+                if (this.isAuthenticated) {
+                    this.auth.getMe().then(data => {
+                        return this.displayName = data.displayName;
+                    });
+                }
+            });
+    }
 
-  }
-  //@computedFrom(this.auth)
-  get isAuthenticated(){
-  	return this.auth.isAuthenticated();
-  }
- 
-  /*get navigationRoutes(){
-  		return this.router.navigation.filter(r=>!r.config.auth);;
+    get isAuthenticated() {
+        return this.auth.isAuthenticated();
+    }
 
-  	if(this.isAuthenticated){
-  		return this.router.navigation;
-  	}
-  	else{
-  		return this.router.navigation.filter(r=>!r.config.auth);
-  	}
-  }*/
+    deactivate() {
+        this.subscription.dispose();
+    }
+
 }
