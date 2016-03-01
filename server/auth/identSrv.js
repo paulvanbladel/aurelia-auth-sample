@@ -36,7 +36,7 @@ exports.authenticate = function (req, res) {
             
                 // Step 3a. Link user accounts.
                 if (req.headers.authorization) {
-                    User.findOne({ identSrv: profile.sub }, function (err, existingUser) {
+                    User.findOne({ "identSrv": profile.sub }, function (err, existingUser) {
                         if (existingUser) {
                             return res.status(409).send({ message: 'There is already an IdentityServer account that belongs to you' });
                         }

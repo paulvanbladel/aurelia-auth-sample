@@ -15,15 +15,11 @@ var configForDevelopment = {
             scopePrefix: '',
             scopeDelimiter: ' ',
             requiredUrlParams: ['scope', 'nonce'],
-            optionalUrlParams: ['display'],
-            state: 'session_state',
+            optionalUrlParams: ['display', 'state'],
             display: 'popup',
             type: '2.0',
-            clientId: 'jsClient',
-            nonce : function(){
-                var val = ((Date.now() + Math.random()) * Math.random()).toString().replace(".", "");
-                return encodeURIComponent(val);
-            },
+            clientId: 'jsclient',
+            
             popupOptions: { width: 452, height: 633 }
         },
         
