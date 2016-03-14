@@ -24,10 +24,12 @@
       <ul if.bind="!isAuthenticated" class="nav navbar-nav navbar-right">
       <li><a href="/#/login">Login</a></li>
       <li><a href="/#/signup">Sign up</a></li>
+      
       </ul>
       <ul if.bind="isAuthenticated" class="nav navbar-nav navbar-right">
         <li><a href="/#/profile">Welcome ${displayName}</a></li>
         <li><a href="/#/logout">Logout</a></li>
+         <li><a href="/#/users">Github Users</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

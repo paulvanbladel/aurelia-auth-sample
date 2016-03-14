@@ -20,7 +20,9 @@ export default class{
 				{ route: 'login',        moduleId: './login',       nav: false, title:'Login' },
 				{ route: 'logout',        moduleId: './logout',       nav: false, title:'Logout' },
 				{ route: 'profile',        moduleId: './profile',       nav: false, title:'Profile' },
-				{ route: 'child-router',  moduleId: './child-router', nav: true, title:'Child Router' }
+				{ route: 'child-router',  moduleId: './child-router', nav: true, title:'Child Router' },
+                { route: 'users',         name: 'users',        moduleId: './users',        nav: false, title: 'Github Users' }
+
 				]);
 			};
 
