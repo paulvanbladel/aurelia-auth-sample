@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "sample application for the aurelia-auth plugin",
   "main": "dist/commonjs/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
   "devDependencies": {
     "aurelia-bundler": "^0.3.0",
     "aurelia-tools": "^0.1.18",
@@ -43,7 +45,7 @@
   "jspm": {
     "dependencies": {
       "aurelia-animator-css": "npm:aurelia-animator-css@^1.0.0-beta.1.1.0",
-      "aurelia-auth": "github:paulvanbladel/aurelia-auth@^0.12.15",
+      "aurelia-auth": "github:paulvanbladel/aurelia-auth@^0.13.1",
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.1.1",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-beta.1.1.0",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.1.0",
@@ -57,6 +59,7 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "fetch": "github:github/fetch@^0.11.0",
       "font-awesome": "npm:font-awesome@^4.5.0",
+      "isomorphic-fetch": "npm:isomorphic-fetch@^2.2.1",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {

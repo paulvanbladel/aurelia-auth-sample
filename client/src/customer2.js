@@ -1,9 +1,10 @@
-import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
+import {inject, useView} from 'aurelia-framework';
+import {CustomHttpClient} from './customHttpClient';
 import 'isomorphic-fetch';
-@inject(HttpClient)
-export class Customer{
-  heading = 'Customer management';
+@inject(CustomHttpClient)
+@useView('./customer.html')
+export class Customer2{
+  heading = 'Customer management with custom http service';
   customers = [];
 
   url = 'api/customer';

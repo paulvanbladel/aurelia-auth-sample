@@ -1,5 +1,5 @@
 var configForDevelopment = {
-
+    loginRedirect: '/#welcome',  
 	providers: {
         
          identSrv : {

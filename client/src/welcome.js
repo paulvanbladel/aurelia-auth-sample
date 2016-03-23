@@ -28,7 +28,6 @@ export class Welcome{
   }
       
   deactivate(){
-    console.log("dispose subscription");
 
     //this.subscription(); // disposing the subscription
    }
