@@ -15,7 +15,7 @@ System.config({
 
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.2.0",
-    "aurelia-auth": "github:paulvanbladel/aurelia-auth@0.13.1",
+    "aurelia-auth": "github:paulvanbladel/aurelia-auth@0.13.7",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.2.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.2.0",
@@ -75,7 +75,7 @@ System.config({
     "github:jspm/nodelibs-zlib@0.1.0": {
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
-    "github:paulvanbladel/aurelia-auth@0.13.1": {
+    "github:paulvanbladel/aurelia-auth@0.13.7": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.2.0",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
       "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.2.0",
