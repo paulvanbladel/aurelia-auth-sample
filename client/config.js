@@ -15,7 +15,7 @@ System.config({
 
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.2.0",
-    "aurelia-auth": "github:paulvanbladel/aurelia-auth@0.13.7",
+    "aurelia-auth": "npm:aurelia-auth@2.1.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.2.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
     "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.2.0",
@@ -75,12 +75,6 @@ System.config({
     "github:jspm/nodelibs-zlib@0.1.0": {
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
-    "github:paulvanbladel/aurelia-auth@0.13.7": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.2.0",
-      "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
-      "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.2.0",
-      "isomorphic-fetch": "npm:isomorphic-fetch@2.2.1"
-    },
     "github:twbs/bootstrap@3.3.6": {
       "jquery": "github:components/jquery@2.2.1"
     },
@@ -91,6 +85,12 @@ System.config({
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.2.0",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.2.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.2.0"
+    },
+    "npm:aurelia-auth@2.1.0": {
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.2.0",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1.2.0",
+      "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.2.0",
+      "isomorphic-fetch": "npm:isomorphic-fetch@2.2.1"
     },
     "npm:aurelia-binding@1.0.0-beta.1.3.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1.2.0",
