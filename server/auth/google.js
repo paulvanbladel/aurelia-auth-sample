@@ -43,6 +43,7 @@ exports.authenticate = function (req, res) {
             user.displayName = user.displayName || profile.name;
             user.save(function() {
               var token = authUtils.createJWT(user);
+              console.log("token sent");
               res.send({ token: token });
             });
           });
@@ -51,6 +52,8 @@ exports.authenticate = function (req, res) {
         // Step 3b. Create a new user account or return an existing one.
         User.findOne({ google: profile.sub }, function(err, existingUser) {
           if (existingUser) {
+              console.log("token sent");
+              
             return res.send({ token: authUtils.createJWT(existingUser) });
           }
           var user = new User();
@@ -59,6 +62,8 @@ exports.authenticate = function (req, res) {
           user.displayName = profile.name;
           user.save(function(err) {
             var token = authUtils.createJWT(user);
+              console.log("token sent");
+            
             res.send({ token: token });
           });
         });
