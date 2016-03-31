@@ -20,7 +20,7 @@ export class CustomHttpClient extends HttpClient {
                 //we call ourselves the interceptor which comes with aurelia-auth
                 //obviously when this custom Http Client is used for services 
                 //which don't need a bearer token, you should not inject the token interceptor
-                .withInterceptor(auth.token_interceptor)
+                .withInterceptor(auth.tokenInterceptor)
                 //still we can augment the custom HttpClient with own interceptors
                 .withInterceptor({
                     request(request) {
