@@ -1,6 +1,5 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
-import 'isomorphic-fetch';
 @inject(HttpClient)
 export class Customer{
   heading = 'Customer management';

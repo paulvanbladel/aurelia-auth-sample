@@ -1,6 +1,5 @@
 import {HttpClient} from 'aurelia-fetch-client';
 import {inject, transient} from 'aurelia-framework';
-import 'isomorphic-fetch';
 //this github specific http client will not send a bearer token.
 export class GithubHttpClient extends HttpClient {
     constructor() {

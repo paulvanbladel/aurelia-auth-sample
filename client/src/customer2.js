@@ -1,6 +1,5 @@
 import {inject, useView} from 'aurelia-framework';
 import {CustomHttpClient} from './customHttpClient';
-import 'isomorphic-fetch';
 @inject(CustomHttpClient)
 @useView('./customer.html')
 export class Customer2{
